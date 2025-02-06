@@ -13,11 +13,9 @@ app.get("/api/classify-number", (req, res) => {
 		return res.status(400).json({ number: number, error: true });
 	}
 
-	num = Math.abs(parseInt(number)); // Convert the number to an integer
-
 	const getData = async () => {
 		try {
-			const response = await getInfo(num);
+			const response = await getInfo(number);
 			res.status(200).json(response);
 		} catch (error) {
 			console.error(error);

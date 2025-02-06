@@ -61,12 +61,13 @@ const getFunFact = async (num) => {
 };
 
 const getInfo = async (num) => {
-	const prime = isPrime(num);
-	const perfect = isPerfect(num);
-	const armstrong = isArmstrong(num);
-	const odd = num % 2 !== 0;
-	const sum = digitSum(num);
-	const funFact = await getFunFact(num);
+	let absNum = Math.abs(parseInt(num)); // Convert the number to an integer
+	const prime = isPrime(absNum);
+	const perfect = isPerfect(absNum);
+	const armstrong = isArmstrong(absNum);
+	const odd = absNum % 2 !== 0;
+	const sum = digitSum(absNum);
+	const funFact = await getFunFact(absNum);
 
 	let properties = [];
 
@@ -75,7 +76,7 @@ const getInfo = async (num) => {
 	properties.push(odd ? "odd" : "even");
 
 	const res = {
-		number: num,
+		number: parseInt(num),
 		is_prime: prime,
 		is_perfect: perfect,
 		properties: properties,
