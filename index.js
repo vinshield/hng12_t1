@@ -7,7 +7,9 @@ const app = express();
 app.use(cors());
 
 app.get("/api/classify-number", (req, res) => {
-	const { number } = req.query;
+	let { number } = req.query;
+
+	number = Math.abs(parseInt(number)); // Convert the number to an integer
 
 	if (!number || isNaN(number)) {
 		return res.status(400).json({ number, error: true });

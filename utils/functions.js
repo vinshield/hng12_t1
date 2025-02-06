@@ -45,10 +45,6 @@ const isArmstrong = (num) => {
 	return sum === parseInt(num);
 };
 
-const isOdd = (num) => {
-	return num % 2 !== 0;
-};
-
 const digitSum = (num) => {
 	const numArray = num.toString().split("");
 
@@ -68,7 +64,7 @@ const getInfo = async (num) => {
 	const prime = isPrime(num);
 	const perfect = isPerfect(num);
 	const armstrong = isArmstrong(num);
-	const odd = isOdd(num);
+	const odd = num % 2 !== 0;
 	const sum = digitSum(num);
 	const funFact = await getFunFact(num);
 
