@@ -19,7 +19,7 @@ This API classifies numbers based on their mathematical properties and provides 
 
 **Example Request:**
 
-GET https://your-vercel-url.com/api/classify-number?number=371
+GET `https://hng12-t1.vercel.app/api/classify-number?number=371`
 
 **Example Response:**
 
@@ -44,7 +44,7 @@ GET https://your-vercel-url.com/api/classify-number?number=371
 
 ### 1. Clone the repository:
 
-`git clone https://github.com/vinshield/classify-number-api.git`
+`git clone https://github.com/vinshield/hng12_t1.git`
 `cd classify-number-api`
 
 ### 2. Install dependencies:
@@ -59,7 +59,7 @@ GET https://your-vercel-url.com/api/classify-number?number=371
 
 ## Live API URL
 
-`https://hng12-t0.vercel.app/`
+`https://hng12-t1.vercel.app/`
 
 ## Reference
 
