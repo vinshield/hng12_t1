@@ -62,7 +62,7 @@ const getFunFact = async (num) => {
 
 const getInfo = async (num) => {
 	let absNum = Math.abs(parseInt(num)); // Convert the number to an integer
-	const prime = isPrime(absNum);
+	const prime = isPrime(num);
 	const perfect = isPerfect(absNum);
 	const armstrong = isArmstrong(absNum);
 	const odd = absNum % 2 !== 0;
