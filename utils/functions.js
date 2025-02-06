@@ -84,7 +84,7 @@ const getInfo = async (num) => {
 		is_perfect: perfect,
 		properties: properties,
 		digit_sum: sum,
-		funFact: funFact,
+		fun_fact: funFact,
 	};
 
 	return res;

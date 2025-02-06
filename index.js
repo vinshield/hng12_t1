@@ -9,8 +9,6 @@ app.use(cors());
 app.get("/api/classify-number", (req, res) => {
 	const { number } = req.query;
 
-	console.log(Number.isInteger(Number(number)));
-
 	if (!number || isNaN(number)) {
 		return res.status(400).json({ number, error: true });
 	}
