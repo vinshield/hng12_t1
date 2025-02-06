@@ -9,11 +9,11 @@ app.use(cors());
 app.get("/api/classify-number", (req, res) => {
 	let { number } = req.query;
 
-	number = Math.abs(parseInt(number)); // Convert the number to an integer
-
 	if (!number || isNaN(number)) {
-		return res.status(400).json({ number, error: true });
+		return res.status(400).json({ number: number, error: true });
 	}
+
+	number = Math.abs(parseInt(number)); // Convert the number to an integer
 
 	const getData = async () => {
 		try {
