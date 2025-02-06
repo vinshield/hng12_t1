@@ -7,17 +7,17 @@ const app = express();
 app.use(cors());
 
 app.get("/api/classify-number", (req, res) => {
-	let { number } = req.query;
+	const { number } = req.query;
 
 	if (!number || isNaN(number)) {
 		return res.status(400).json({ number: number, error: true });
 	}
 
-	number = Math.abs(parseInt(number)); // Convert the number to an integer
+	num = Math.abs(parseInt(number)); // Convert the number to an integer
 
 	const getData = async () => {
 		try {
-			const response = await getInfo(number);
+			const response = await getInfo(num);
 			res.status(200).json(response);
 		} catch (error) {
 			console.error(error);
